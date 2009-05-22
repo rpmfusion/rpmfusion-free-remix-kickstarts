@@ -1,0 +1,11 @@
+When you distribute software that is made with these kickstart files please
+remember:
+
+* If you are going to call it a Fedora Remix you need to fulfill the
+Fedora Remix rules; see http://fedoraproject.org/wiki/Remix for details.
+
+* Fedora is distributed under the terms of the GPL section 3(a) and 
+not 3(b)! See http://fedoraproject.org/wiki/Legal/Distribution for details.
+
+* By mixing packages from Fedora or RPM Fusion Free with nonfree software
+you might violate section 2 of the GPL.
