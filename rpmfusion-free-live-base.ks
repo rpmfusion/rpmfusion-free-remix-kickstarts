@@ -5,7 +5,7 @@
 ## the repos match what is configured in fedora-live-base.ks
 
 # To compose against the current release tree, use the following "repo"
-#repo --name=rpmfusion-free --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-11&arch=$basearch
+#repo --name=rpmfusion-free-released --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-11&arch=$basearch
 # To include updates, use the following "repo"
 #repo --name=rpmfusion-free-updates --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-updates-released-11&arch=$basearch
 
