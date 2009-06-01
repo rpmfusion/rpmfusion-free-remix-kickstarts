@@ -1,7 +1,15 @@
 # Make sure you read /usr/share/doc/rpmfusion-spins-kickstart*/README before
 # distributing a linux distribution that is build with this kickstart file
 
-# enable and use RPM Fusion free
+## reminder: enable and disable as well as modify following repos to make sure
+## the repos match what is configured in fedora-live-base.ks
+
+# To compose against the current release tree, use the following "repo"
+#repo --name=rpmfusion-free --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-11&arch=$basearch
+# To include updates, use the following "repo"
+#repo --name=rpmfusion-free-updates --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-updates-released-11&arch=$basearch
+
+# To compose against rawhide, use the following "repo"
 repo --name=rpmfusion-free-rawhide --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-rawhide&arch=$basearch
 
 %packages
