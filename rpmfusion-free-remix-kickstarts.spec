@@ -1,8 +1,8 @@
 Name:       rpmfusion-free-remix-kickstarts
 # we follow the spin-kickstarts version scheme as the files in this 
 # package highly depend on them anyway
-Version:    0.16.0
-Release:    0.1%{?dist}
+Version:    0.17.0
+Release:    1%{?dist}
 Summary:    Kickstart files for creating distributions with packages RPM Fusion free
 
 Group:      Applications/System
@@ -50,8 +50,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}/
 
 %changelog
+* Tue May 01 2012 Nicolas Chauvet <kwizart@gmail.com> - 0.17.0-1
+- Update to 0.17.0
+
 * Sat Oct 08 2011 Nicolas Chauvet <kwizart@gmail.com> - 0.16.0-0.1
-- Update to 16.0
+- Update to 0.16.0
 
 * Mon Jun 01 2009 Thorsten Leemhuis <fedora at leemhuis dot info > 0.11.1-5
 - add disabled repo definitions for f11 release
