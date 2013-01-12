@@ -2,7 +2,7 @@ Name:       rpmfusion-free-remix-kickstarts
 # we follow the spin-kickstarts version scheme as the files in this 
 # package highly depend on them anyway
 Version:    0.18.0
-Release:    0.1%{?dist}
+Release:    1%{?dist}
 Summary:    Kickstart files for creating distributions with packages RPM Fusion free
 
 Group:      Applications/System
@@ -50,6 +50,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}/
 
 %changelog
+* Sat Jan 12 2013 Nicolas Chauvet <kwizart@gmail.com> - 0.18.0-1
+- Update for F-18 Final
+
 * Tue May 01 2012 Nicolas Chauvet <kwizart@gmail.com> - 0.18.0-0.1
 - Update to 0.18.0
 
