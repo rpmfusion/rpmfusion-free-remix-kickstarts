@@ -1,8 +1,8 @@
 Name:       rpmfusion-free-remix-kickstarts
 # we follow the spin-kickstarts version scheme as the files in this 
 # package highly depend on them anyway
-Version:    0.18.0
-Release:    0.1%{?dist}
+Version:    0.19.0
+Release:    1%{?dist}
 Summary:    Kickstart files for creating distributions with packages RPM Fusion free
 
 Group:      Applications/System
@@ -13,7 +13,6 @@ Source2:    rpmfusion-remix-kickstarts-COPYING
 Source10:   rpmfusion-free-live-base.ks
 Source11:   rpmfusion-free-livecd-desktop.ks
 Source12:   rpmfusion-free-livecd-kde.ks
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:  noarch
 
 Requires:   spin-kickstarts >= %{version}
@@ -31,7 +30,6 @@ echo "nothing to setup"
 echo "nothing to build"
 
 %install
-rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/%{name}/
 install -p -m644 %{SOURCE1} README
 install -p -m644 %{SOURCE2} COPYING
@@ -41,15 +39,16 @@ install -t $RPM_BUILD_ROOT%{_datadir}/%{name}/ -p -m644 \
   %{SOURCE12}
 
 
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root,-)
 %doc COPYING README
 %{_datadir}/%{name}/
 
 %changelog
+* Sun Apr 28 2013 Nicolas Chauvet <kwizart@gmail.com> - 0.19.0-1
+- Update to 0.19.0
+- Spec file clean-up
+
 * Tue May 01 2012 Nicolas Chauvet <kwizart@gmail.com> - 0.18.0-0.1
 - Update to 0.18.0
 

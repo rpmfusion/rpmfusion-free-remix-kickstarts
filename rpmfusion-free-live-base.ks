@@ -5,12 +5,12 @@
 ## the repos match what is configured in fedora-live-base.ks
 
 # To compose against the current release tree, use the following "repo"
-#repo --name=rpmfusion-free-released --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-18&arch=$basearch
+repo --name=rpmfusion-free-released --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-19&arch=$basearch
 # To include updates, use the following "repo"
-#repo --name=rpmfusion-free-updates --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-updates-released-18&arch=$basearch
+repo --name=rpmfusion-free-updates --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-updates-released-19&arch=$basearch
 
 # To compose against rawhide, use the following "repo"
-repo --name=rpmfusion-free-rawhide --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-rawhide&arch=$basearch
+#repo --name=rpmfusion-free-rawhide --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-rawhide&arch=$basearch
 
 %packages
 # unbrand:
@@ -23,14 +23,7 @@ generic-release-notes
 
 ## RPM Fusion packages normally come via comps.xml, some adjustments below this line
 #
-# "best hardware support by default" would be nice, but space is limited:
--foo2hiperc
--foo2hp
--foo2lava
--foo2qpdl
--foo2slx
--foo2xqx
--foo2zjs
+
 %end
 
 %post
@@ -38,9 +31,9 @@ echo "== RPM Fusion Free: Base section =="
 echo "Importing RPM Fusion keys"
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-*-primary
 echo "List of packages from RPM Fusion Free:"
-rpm -qa --qf '%{NAME} %{SIGGPG:pgpsig} %{SIGPGP:pgpsig} \n' | grep -e daab8b888296fa0f -e 36339914982e0a7c | awk ' { print $1 } ' | sort
+rpm -qa --qf '%{NAME} %{SIGGPG:pgpsig} %{SIGPGP:pgpsig} \n' | grep -e 6f6382f9172ff33d | awk ' { print $1 } ' | sort
 echo "List of incuded RPM Fusion packages with their size:"
-rpm -q --qf '%{SIZE} %{NAME}\n' $(rpm -qa --qf '%{NAME} %{SIGGPG:pgpsig} %{SIGPGP:pgpsig} \n' | grep -e daab8b888296fa0f -e 36339914982e0a7c| awk ' { print $1 } ') | sort -n
+rpm -q --qf '%{SIZE} %{NAME}\n' $(rpm -qa --qf '%{NAME} %{SIGGPG:pgpsig} %{SIGPGP:pgpsig} \n' | grep -e 6f6382f9172ff33d | awk ' { print $1 } ') | sort -n
 echo
 %end
 
