@@ -1,8 +1,6 @@
 Name:       rpmfusion-free-remix-kickstarts
-# we follow the spin-kickstarts version scheme as the files in this 
-# package highly depend on them anyway
-Version:    0.20.0
-Release:    3%{?dist}
+Version:    0.27
+Release:    1%{?dist}
 Summary:    Kickstart files for creating distributions with packages RPM Fusion free
 
 Group:      Applications/System
@@ -45,6 +43,9 @@ install -t $RPM_BUILD_ROOT%{_datadir}/%{name}/ -p -m644 \
 %{_datadir}/%{name}/
 
 %changelog
+* Fri Sep 01 2017 Nicolas Chauvet <kwizart@gmail.com> - 0.27-1
+- Bump to 27
+
 * Thu Aug 31 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 0.20.0-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
 

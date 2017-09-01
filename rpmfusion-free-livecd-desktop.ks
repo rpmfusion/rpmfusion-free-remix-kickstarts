@@ -8,6 +8,4 @@
 ## RPM Fusion packages normally come via comps.xml, but to fit space
 ## constraints do some small adjustments:
 #
-# big, lots of deps:
--gnome-mplayer 
 %end
